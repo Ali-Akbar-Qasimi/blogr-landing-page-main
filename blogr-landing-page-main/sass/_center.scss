@@ -1,0 +1,94 @@
+$Verydarkgrayblue: hsl(237, 17%, 21%);
+$Verydarkdesaturatedblue: hsl(237, 23%, 32%);
+
+
+$White : hsl(0, 0%, 100%);//(text)
+$Grayishblue: hsl(240, 2%, 79%); //(footer text)
+$Verydarkgrayishblue : hsl(207, 13%, 34%);//(body copy)
+$Verydarkblackblue : hsl(240, 10%, 16%);//(footer background)
+
+
+main{       
+    .center{
+        height: 80vh;
+        width: 100%;
+        background-image:url(/images/bg-pattern-circles.svg), linear-gradient(to bottom,$Verydarkgrayblue,$Verydarkdesaturatedblue);
+        background-repeat: no-repeat;
+        background-size: 160%;
+        background-position: 50% 140%;
+        border-top-right-radius: 100px;
+        border-bottom-left-radius: 100px;
+        .center-container{
+            .center-image{
+                text-align: center;
+                img{
+                    margin-top: -250px;
+                    max-width: 500px;
+                }
+            }
+            .center-text{
+                text-align: center;
+                margin-left: 50%;
+                transform: translateX(-50%);
+                margin-top: -20px;
+                h1{
+                    font-size: 33px;
+                    max-width: 290px;
+                    font-weight: 900;
+                    line-height: 40px;
+                    margin-bottom: 20px;
+                }
+                p{
+                    font-size: 16px;
+                    max-width: 300px;
+                    color: $Grayishblue;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:733px){
+    main{
+        .center{
+            height: 50vh;
+            width: 100%;
+            background-image: url(/images/bg-pattern-circles.svg),linear-gradient(to right,$Verydarkgrayblue,$Verydarkdesaturatedblue);
+            background-size: 100%;
+            background-position: -50% 80%;
+            .center-container{
+                display: flex;
+                flex-direction: row;
+                .center-image{
+                    img{
+                        margin-top: -70px;
+                        margin-left: 10%;
+                    }
+                }
+                .center-text{
+                    text-align: start;
+                    transform: translateX(0);
+                    margin: 50px 0 0 30px;
+                    h1{
+                        font-size: 30px;
+                        max-width: 600px;
+                    }
+                    p{
+                        max-width: 600px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width:800px){
+    main{
+        .center{
+            .center-container{
+                .center-text{
+                    margin: 70px 0 0 10%;
+                }
+            }
+        }
+    }
+}
