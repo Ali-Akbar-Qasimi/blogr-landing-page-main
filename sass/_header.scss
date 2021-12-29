@@ -1,0 +1,378 @@
+
+
+$Lightred: hsl(356, 100%, 66%);//(CTA text)
+$Verylightred: hsl(355, 100%, 74%);//(CTA hover background)
+$Verydarkblue: hsl(208, 49%, 24%);//(headings)
+
+//### Neutral
+
+$White : hsl(0, 0%, 100%);//(text)
+$Grayishblue: hsl(240, 2%, 79%); //(footer text)
+$Verydarkgrayishblue : hsl(207, 13%, 34%);//(body copy)
+$Verydarkblackblue : hsl(240, 10%, 16%);//(footer background)
+
+//gradiant
+$Verylightred: hsl(13, 100%, 72%);
+$Lightred: hsl(353, 100%, 62%);
+
+
+.header{
+    background-image: url(/images/bg-pattern-intro.svg) ,linear-gradient(to bottom,$Verylightred,$Lightred);
+    background-position: 35% 40%;
+    background-size: 350%;
+    height: 80vh;
+    width: 100%;
+    border-bottom-left-radius: 100px;
+    .nav{
+        font-family:sans-serif;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px 30px;
+        .logo{
+            font-size: 30px;
+            font-weight: 700;
+            list-style: none;
+            a{
+                text-decoration: none;
+            }
+        }
+        .contianer-links{
+            display: flex;
+            .nav-links{
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                transition: .5s linear;
+                background-color: $White;
+                width: 90vw;
+                left: 5%;
+                top: 15%;
+                border-radius: 5px;
+                font-family: "Ubuntu",sans-serif;
+                transform: translateX(120%);
+                box-shadow: 10px 20px 50px 2px $Verydarkblackblue;
+                .left{
+                    li{
+                        list-style: none;
+                        padding: 10px;
+                        text-align: center;
+                        a{
+                            text-decoration: none;
+                            color: $Verydarkblackblue;
+                            margin-right: 10px;
+                        }
+                    }
+
+                    .product{
+                        img{
+                            transition: .5s;
+                            width: 15px;
+                        }
+                        .drop-down-product{
+                            background-color: $Grayishblue;
+                            display: none;
+                            border-radius: 5px;
+                            margin-top: 20px;
+                            ul{
+                                padding: 10px;
+                                li{
+                                    padding: 10px;
+                                }
+                            }
+                        }
+                    }
+                    .product.product-drop-down{
+                        img{
+                            transform: rotate(180deg);
+                        }
+                        .drop-down-product{
+                            display: block;
+                        }
+                    }
+                    .company{
+                        padding: 10px;
+                        img{
+                            transition: .5s;
+                            width: 15px;
+                        }
+                        .drop-down-company{
+                            background-color: $Grayishblue;
+                            display: none;
+                            margin-top: 20px;
+                            border-radius: 5px;
+                        }
+                    }
+                    .company.company-drop-down{
+                        img{
+                            transform: rotate(180deg);
+                            transform-origin: center;
+                        }
+                        .drop-down-company{
+                            display: block;
+                        }
+                    }
+                    .connect{
+                        img{
+                            transition: .5s;
+                            width: 15px;
+                        }
+                        .drop-down-connect{
+                            background-color: $Grayishblue;
+                            display: none;
+                            margin-top: 20px;
+                            border-radius: 5px;
+                        }
+                    }
+                    .connect.connect-drop-down{
+                        img{
+                            transform: rotate(180deg);
+                            transform-origin: center;
+                        }
+                        .drop-down-connect{
+                            display: block;
+                        }
+                    }
+                }
+                .right{
+                    padding: 20px;
+                    li{
+                        text-align: center;
+                        padding: 10px;
+
+                        a{
+                            color: $Verydarkblackblue;
+                            text-decoration: none;
+                        }
+                    }
+                    .logIn{
+                        font-family: "Overpass",sans-serif;
+                        border-top: 1px solid $Grayishblue;
+                    }
+                    .signUp{
+                        a{
+                            padding: 10px 20px;
+                            background-image: linear-gradient(to right , $Verylightred,$Lightred);
+                            border-radius: 40px;
+                            color: $White;
+                        }
+                    }
+                }
+            }
+            .nav-links.responsive{
+                transform: translateX(0%);
+            }
+        }
+    }
+    .main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 300px;
+        margin: 0 auto;
+        margin-top: 30px;
+        h1{
+            font-size: 33px;
+            font-weight: 600;
+        }
+        p{
+            color: $White;
+            font-size: 17px;
+            padding:10px 0 50px 0;
+            font-weight: 200;
+        }
+        .start-for-free{
+            background-color: $White;
+            color: $Lightred;
+            &:hover{
+                background-color: $Verylightred;
+                color: $White;
+            }
+        }
+        .learn-more{
+            border:1px solid $White;
+            margin-left: 10px;
+            &:hover{
+                background-color: $White;
+                color: $Lightred;
+            }
+        }
+        a{
+            padding: 13px 20px; 
+            font-family: 'Ubuntu',sans-serif;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: .5s;
+        }
+    }
+}
+
+@media (min-width:787px){
+    .header{
+        background-size: 200%;
+        background-position: 20% 50%;
+        .nav{                
+            .logo{
+                padding-left: 10%;
+            }
+            .contianer-links{
+                display: flex;
+                align-items: center;
+                .nav-links{
+                    color: $White;
+                    transition: 0ms;
+                    display: flex;
+                    transform: translateX(0);
+                    background-color: transparent;
+                    box-shadow: none;
+                    position: static;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+                    .left{
+                        display: flex;
+                        padding-left: 50px;
+                        li{
+                            a{
+                                color: $White;
+                            }
+                        }
+                        .product{
+                            &:hover{
+                                img{
+                                    transform: rotate(180deg);
+                                }
+                                .drop-down-product{
+                                    display: block;
+                                }
+                            }
+                            a{
+                                &:hover{
+                                    text-decoration: underline;
+                                }
+                            }
+                            .drop-down-product{
+                                position: absolute;
+                                background-color: white;
+                                display: none;
+                                margin-top: 10px;
+                                ul{
+                                    li{
+                                        a{
+                                            text-decoration: none;
+                                            color: $Verydarkgrayishblue;
+                                            &:hover{
+                                                color: $Verydarkblackblue;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .company{
+                            &:hover{
+                                img{
+                                    transform: rotate(180deg);
+                                }
+                                .drop-down-company{
+                                    display: block;
+                                }
+                            }
+                            a{
+                                &:hover{
+                                    text-decoration: underline;
+                                }
+                            }
+                            .drop-down-company{
+                                position: absolute;
+                                background-color: white;
+                                display: none;
+                                margin-top: 10px;
+                                ul{
+                                    li{
+                                        a{
+                                            text-decoration: none;
+                                            color: $Verydarkgrayishblue;
+                                            &:hover{
+                                                color: $Verydarkblackblue;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .connect{
+                            &:hover{
+                                img{
+                                    transform: rotate(180deg);
+                                }
+                                .drop-down-connect{
+                                    display: block;
+                                }
+                            }
+                            a{
+                                &:hover{
+                                    text-decoration: underline;
+                                }
+                            }
+                            .drop-down-connect{
+                                position: absolute;
+                                background-color: white;
+                                display: none;
+                                margin-top: 10px;
+                                margin-right: 50px;
+                                ul{
+                                    li{
+                                        a{
+                                            text-decoration: none;
+                                            color: $Verydarkgrayishblue;
+                                            &:hover{
+                                                color: $Verydarkblackblue;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .right{
+                        display: flex;
+                        list-style: none;
+                        padding-right: 22%;
+                        .logIn{
+                            border: none;
+                            a{
+                                color: $White;
+                            }
+                        }
+                        .signUp{
+                            a{
+                                background: $White;
+                                color: $Lightred;
+                                transition: .5s;
+                                &:hover{
+                                    background-color: $Verylightred;
+                                    color: $White;
+                                }
+                            }
+                        }
+                    }
+                }
+                .hamburger{
+                    #toggle{
+                        display: none;
+                    }
+                }
+            }                
+
+        }    
+        .main{
+            width: 700px;
+            h1{
+                font-size: 45px;
+            }
+        }
+    }
+}

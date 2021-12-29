@@ -1,0 +1,83 @@
+$White : hsl(0, 0%, 100%);//(text)
+$Grayishblue: hsl(240, 2%, 79%); //(footer text)
+$Verydarkgrayishblue : hsl(207, 13%, 34%);//(body copy)
+$Verydarkblackblue : hsl(240, 10%, 16%);//(footer background)
+
+.footer{
+    width: 100%;
+    background-color: $Verydarkblackblue;
+    height: 100vh;
+    background-color:$Verydarkblackblue;
+    margin-top: 1166px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+    border-top-right-radius: 100px;
+    .logo-footer{
+        margin-top: 30px;
+        font-size: 23px;
+        font-weight: 900;
+    }
+    .product-footer{
+        color: $Grayishblue;
+        h1{
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        ul{
+            li{
+                list-style: none;
+                padding:2px;
+                color: $Grayishblue;
+            }
+        }
+    }
+    .company-footer{
+        color: $Grayishblue;
+        h1{
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        ul{
+            li{
+                list-style: none;
+                padding:2px;
+                color: $Grayishblue;
+            }
+        }
+    }
+    .connect-footer{
+        color: $Grayishblue;
+        h1{
+            font-size: 20px;
+            font-weight: 600;            
+            margin-bottom: 20px;
+        }
+        ul{
+            li{
+                list-style: none;
+                padding:2px;
+                color: $Grayishblue;
+            }
+        }
+    }
+}
+@media (min-width:786px){
+    .footer{
+        margin-top: 808px;
+        height: 50vh; 
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: start;
+        justify-content: space-between;
+        padding: 50px 200px;
+        .logo-footer{
+            margin-top: -20px;
+        }
+    }
+}
