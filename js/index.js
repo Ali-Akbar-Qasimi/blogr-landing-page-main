@@ -35,10 +35,10 @@ function myFunction(){
     let hamburger = document.querySelector('#toggle')
     let navbar = document.getElementById('myNavLinks');
     if (navbar.className==="nav-links") {
-        hamburger.src = "/images/icon-close.svg"
+        hamburger.src = "../images/icon-close.svg"
         navbar.className+=" responsive";
     } else {
         navbar.className="nav-links"
-        hamburger.src="/images/icon-hamburger.svg"
+        hamburger.src="../images/icon-hamburger.svg"
     }
 }
